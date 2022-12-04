@@ -1,0 +1,170 @@
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hwb(228 96% 0%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+
+.card{
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    gap: 20px;
+    padding: 30px 40px;
+}
+
+.card-image img{
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.card-text h1{
+    color: var(--Dark-blue);
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.card-text p{
+    font-size: 14px;
+    color: var(--Desaturated-blue);
+    line-height: 22px;
+}
+
+
+.card-plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.card-plan-price{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.card-plan-price img{
+    margin-right: 10px;
+}
+
+.annual-plan{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.annual-plan h3{
+    font-size:17px;
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+.annual-plan p{
+    font-size: 16px;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+
+.card-plan-link a{
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.main-button{
+    background-color: var(--Bright-blue);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.secondary-button{
+    border: none;
+    font-size: 13px;
+    background-color: #fff;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        padding: 0 20px;
+    }
+
+    .card-text h1{
+        font-size: 22px;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    .annual-plan h3{
+        font-size:15px;
+    }
+    
+    .annual-plan p{
+        font-size: 14px;
+    }
+}
